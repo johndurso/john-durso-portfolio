@@ -26,6 +26,7 @@ export default function BlogCard({
     year: "numeric",
     month: "long",
     day: "numeric",
+    timeZone: "UTC",
   });
 
   return (
@@ -37,6 +38,7 @@ export default function BlogCard({
       <div className="relative aspect-video overflow-hidden bg-[var(--color-bg-secondary)]">
         <Image
           src={coverImage}
+          loading="eager"
           alt={title}
           fill
           className="object-cover transition-transform duration-500 group-hover:scale-105"

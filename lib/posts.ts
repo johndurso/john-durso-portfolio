@@ -26,7 +26,7 @@ export function getAllPosts(): Post[] {
   const allPostsData = fileNames
     .filter((f) => f.endsWith(".md"))
     .map((fileName) => {
-      const slug = fileName.replace(/\.md$/, "");
+      const slug = fileName.replace(/\.md$/, "").replace(/\s+/g, "-").toLowerCase();
       const fullPath = path.join(postsDirectory, fileName);
       const fileContents = fs.readFileSync(fullPath, "utf8");
       const { data, content } = matter(fileContents);
@@ -49,12 +49,13 @@ export function getAllPosts(): Post[] {
 
 export function getPostBySlug(slug: string): Post | null {
   try {
-    const fullPath = path.join(postsDirectory, `${slug}.md`);
+    const decodedSlug = decodeURIComponent(slug);
+    const fullPath = path.join(postsDirectory, `${decodedSlug}.md`);
     const fileContents = fs.readFileSync(fullPath, "utf8");
     const { data, content } = matter(fileContents);
 
     return {
-      slug,
+      slug: decodedSlug.replace(/\s+/g, "-").toLowerCase(),
       title: data.title || "Untitled",
       date: data.date || new Date().toISOString().split("T")[0],
       excerpt: data.excerpt || "",
@@ -66,6 +67,7 @@ export function getPostBySlug(slug: string): Post | null {
     return null;
   }
 }
+
 
 export async function getPostContentAsHtml(content: string): Promise<string> {
   const processedContent = await remark().use(html).process(content);

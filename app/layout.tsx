@@ -42,10 +42,11 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      data-scroll-behavior="smooth"
       suppressHydrationWarning
       className={`${inter.variable} ${spaceGrotesk.variable}`}
     >
-      <body className="bg-surface text-[var(--color-text)] antialiased">
+      <body suppressHydrationWarning className="bg-surface text-[var(--color-text)] antialiased">
         <ThemeProvider
           attribute="class"
           defaultTheme="light"

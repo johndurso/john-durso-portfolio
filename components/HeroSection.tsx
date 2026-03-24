@@ -119,6 +119,7 @@ export default function HeroSection() {
                 src="/images/john-durso.jpg"
                 alt="John Durso"
                 fill
+                sizes="(max-width: 1200px) 300px, 450px"
                 className="object-cover object-top"
                 priority
               />

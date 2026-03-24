@@ -6,16 +6,20 @@ import { ArrowLeft, Calendar, Tag } from "lucide-react";
 import type { Metadata } from "next";
 
 interface Props {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }
 
 export async function generateStaticParams() {
+  if (process.env.NODE_ENV === 'development') {
+    return [];
+  }
   const posts = getAllPosts();
   return posts.map((post) => ({ slug: post.slug }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const post = getPostBySlug(params.slug);
+  const { slug } = await params;
+  const post = getPostBySlug(slug);
   if (!post) return { title: "Post Not Found" };
   return {
     title: `${post.title} | John Durso`,
@@ -23,8 +27,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
+
+
 export default async function BlogPostPage({ params }: Props) {
-  const post = getPostBySlug(params.slug);
+  const { slug } = await params;
+  const post = getPostBySlug(slug);
   if (!post) notFound();
 
   const contentHtml = await getPostContentAsHtml(post.content);

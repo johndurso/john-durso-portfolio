@@ -32,7 +32,7 @@ export async function POST(req: NextRequest) {
     createPost({
       slug,
       title,
-      date: date || new Date().toISOString().split("T")[0],
+      date: date || new Date().toISOString().split('T')[0],
       excerpt: excerpt || "",
       coverImage: coverImage || "/images/blog-placeholder.jpg",
       content,
