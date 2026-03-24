@@ -3,7 +3,7 @@ title: "4 CSS Tricks Every Developer Should Know in 2026"
 date: "2026-03-23"
 excerpt: "Four defensive CSS techniques that will save you from the most common layout headaches in modern web development."
 coverImage: "/images/blog/4-css-tricks-every-developer-should-know-in-2026.jpg"
-tags: ["css", "web development", "front-end"]
+tags: ["CSS", "Web Development"]
 ---
 
 CSS has a reputation for being deceptively simple. You think you've got a layout nailed, and then you open it on a different device and everything looks broken. After years of developers running into the same issues over and over again, a set of "defensive" CSS techniques has emerged. Here are four that I think every developer should have locked in for 2026.

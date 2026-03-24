@@ -35,7 +35,8 @@ export default async function BlogPostPage({ params }: Props) {
   if (!post) notFound();
 
   const contentHtml = await getPostContentAsHtml(post.content);
-  const formattedDate = new Date(post.date).toLocaleDateString("en-US", {
+  const [year, month, day] = post.date.split("-").map(Number);
+  const formattedDate = new Date(year, month - 1, day).toLocaleDateString("en-US", {
     year: "numeric",
     month: "long",
     day: "numeric",
