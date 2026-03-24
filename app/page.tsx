@@ -47,7 +47,7 @@ export default async function HomePage() {
                 Selected Work
               </p>
               <h2 className="font-display font-bold text-3xl md:text-4xl">
-                Features Projects
+                Featured Projects
               </h2>
             </div>
             <a
