@@ -70,7 +70,7 @@ export default async function HomePage() {
 
       {/* Recent Blog Posts */}
       {recentPosts.length > 0 && (
-        <section className="bg-surface-secondary py-24">
+        <section className="py-24">
           <div className="max-w-7xl mx-auto px-6">
             <AnimatedSection>
               <div className="flex items-end justify-between mb-12">
@@ -121,7 +121,7 @@ export default async function HomePage() {
           </AnimatedSection>
 
           <AnimatedSection delay={0.2}>
-            <div className="bg-surface-secondary border border-theme rounded-2xl p-8">
+            <div className="border border-theme rounded-2xl p-8">
               <ContactForm />
             </div>
           </AnimatedSection>

@@ -20,7 +20,7 @@ export default function HeroSection() {
         <motion.div
           animate={{ scale: [1, 1.15, 1], opacity: [0.1, 0.2, 0.1] }}
           transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-          className="absolute -bottom-40 -left-40 w-[500px] h-[500px] rounded-full bg-[var(--color-accent-secondary)] blur-[120px] opacity-15"
+          className="absolute -top-40 -left-40 w-[600px] h-[600px] rounded-full bg-[var(--color-accent-secondary)] blur-[120px] opacity-20"
         />
       </div>
 

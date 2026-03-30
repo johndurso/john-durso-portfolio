@@ -6,7 +6,7 @@ import CodepenIcon from "@/components/icons/CodepenIcon";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-theme bg-surface-secondary mt-20">
+    <footer className="mt-20">
       <div className="max-w-7xl mx-auto px-6 py-12 flex flex-col md:flex-row items-center justify-between gap-6">
         <div>
           <p className="font-display font-bold text-lg">
