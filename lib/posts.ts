@@ -2,7 +2,9 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import { remark } from "remark";
-import html from "remark-html";
+import remarkRehype from "remark-rehype";
+import rehypeExternalLinks from "rehype-external-links";
+import rehypeStringify from "rehype-stringify";
 
 const postsDirectory = path.join(process.cwd(), "content/posts");
 
@@ -68,9 +70,12 @@ export function getPostBySlug(slug: string): Post | null {
   }
 }
 
-
 export async function getPostContentAsHtml(content: string): Promise<string> {
-  const processedContent = await remark().use(html).process(content);
+  const processedContent = await remark()
+    .use(remarkRehype)
+    .use(rehypeExternalLinks, { target: "_blank", rel: ["noopener", "noreferrer"] })
+    .use(rehypeStringify)
+    .process(content);
   return processedContent.toString();
 }
 

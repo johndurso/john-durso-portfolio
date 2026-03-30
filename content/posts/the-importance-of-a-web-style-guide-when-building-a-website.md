@@ -22,7 +22,7 @@ But here's the thing: skipping the style guide doesn't save you time. **It costs
 
 Here's where that debt shows up:
 
-Inconsistency creeps in. You pick a font size for your H2 headings early on, then forget it two weeks later and eyeball a different one. Now you have two slightly different H2 sizes living on the same site. Handoffs become painful. If you ever bring in another designer, developer, or content creator, they have no reference point. They're guessing — and guessing leads to inconsistency.
+Inconsistency creeps in. You pick a font size for your H2 headings early on, then forget it two weeks later and eyeball a different one. Now you have two slightly different H2 sizes living on the same site. Handoffs become painful. If you ever bring in another designer, developer, or content creator, they have no reference point. They're guessing, and guessing leads to inconsistency.
 
 Redesigns take longer. Without documented design decisions, you have to reverse-engineer your own site to figure out what's what before you can change anything. A style guide forces you to make intentional decisions upfront, so you're not making, and remaking, them constantly throughout the project.
 
@@ -32,7 +32,7 @@ Every style guide will look a little different depending on the project, but the
 
 1.  #### Color Palette
     
-    Define your primary, secondary, and accent colors, along with any background and text colors. Document them in every format you'll realistically use — HEX, RGB, and HSL. More importantly, define how each color is used. Which one is for CTAs? Which is for hover states? Which is strictly for destructive actions like delete buttons?  
+    Define your primary, secondary, and accent colors, along with any background and text colors. Document them in every format you'll be using: HEX, RGB, and HSL. More importantly, define how each color is used. Which one is for CTAs? Which is for hover states? Which is strictly for destructive actions like delete buttons?  
       
     ```
     :root {
@@ -79,11 +79,11 @@ Every style guide will look a little different depending on the project, but the
     This is where your style guide starts to feel like a component library. Document the visual rules for every repeating UI element on your site:
 
     ```
-    Buttons — primary, secondary, ghost, and disabled states
-    Forms — input fields, labels, error states, focus styles
-    Cards — how content is contained, spaced, and shadowed
-    Navigation — active states, hover behavior, mobile treatment
-    Alerts and Badges — colors and icons for success, warning, error
+    Buttons: primary, secondary, ghost, and disabled states
+    Forms: input fields, labels, error states, focus styles
+    Cards: how content is contained, spaced, and shadowed
+    Navigation: active states, hover behavior, mobile treatment
+    Alerts and Badges: colors and icons for success, warning, error
     ```
     
     For each component, include the visual rules and the interaction states. A button that looks great at rest but has no visible focus state is an accessibility problem waiting to happen.
@@ -106,7 +106,7 @@ There's a common misconception that style guides are only necessary when multipl
 
 As a solo designer or developer, your style guide is a contract you make with your future self. Two months into a project, you will forget why you made certain decisions. 6 months in, you'll forget what decisions you even made. A style guide is the antidote to that.
 
-It also signals professionalism. When a client can see a well-documented style guide for their project, it builds confidence. It shows that you're not just designing by intuition — you're designing with intention.
+It also signals professionalism. When a client can see a well-documented style guide for their project, it builds confidence. It shows that you're designing with intention, not just by intuition.
 
 ### Treat It as a Living Document
 
@@ -114,13 +114,13 @@ One of the most important things to understand about a style guide is that it's 
 
 The worst thing you can do is create a thorough style guide at the start of a project and then never touch it again. An outdated style guide is almost worse than no style guide, because it creates confusion about what's current and what's been superseded.
 
-Build the habit of updating your style guide whenever you make a meaningful design decision. Treat it like documentation in a codebase — if the change isn't reflected in the guide, it doesn't really exist.
+Build the habit of updating your style guide whenever you make a meaningful design decision. Treat it like documentation in a codebase: if the change isn't reflected in the guide, it doesn't really exist.
 
 ### Where to Keep It
 
 There's no single right answer here, but a few approaches work well depending on the scale of your project:
 
--   A Markdown file in your repo — Simple, version-controlled, and always close to the code. Great for smaller projects.
+-   A Markdown file in your repo: Simple, version-controlled, and always close to the code. Great for smaller projects.
 -   A ***/style-guide*** route on your site. A living style guide that renders your actual components in context. More work to set up, but incredibly useful in the long run.
 -   A design tool like Figma. Ideal if your style guide needs to live alongside mockups and prototypes.
 -   For most projects, **a combination works best**: design tokens and component rules documented in code, and visual references maintained in a design tool.

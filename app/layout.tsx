@@ -21,7 +21,7 @@ const spaceGrotesk = Space_Grotesk({
 export const metadata: Metadata = {
   title: "John Durso | Senior Web & Digital Experience Designer",
   description:
-    "Portfolio of John Durso — Senior Web Designer, Digital Experience Designer, and UX Specialist based in Oak Park, Michigan.",
+    "Portfolio of John Durso: Senior Web Designer, Digital Experience Designer, and UX Specialist based in Oak Park, Michigan.",
   keywords: ["web design", "UX", "digital experience", "AEM", "portfolio"],
   authors: [{ name: "John Durso" }],
   openGraph: {

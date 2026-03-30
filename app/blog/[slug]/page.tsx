@@ -27,8 +27,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-
-
 export default async function BlogPostPage({ params }: Props) {
   const { slug } = await params;
   const post = getPostBySlug(slug);
@@ -85,8 +83,10 @@ export default async function BlogPostPage({ params }: Props) {
           <Image
             src={post.coverImage}
             alt={post.title}
-            fill
-            className="object-cover"
+            width={1280}
+            height={720}
+            sizes="(max-width: 768px) 100vw, 768px"
+            className="object-cover w-full h-full"
             priority
           />
         </div>

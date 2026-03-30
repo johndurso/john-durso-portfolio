@@ -85,7 +85,7 @@ export default function WorkPage() {
         </AnimatedSection>
       </div>
 
-      {/* Past Work — Infinite Scroll */}
+      {/* Past Work */}
       <section className="mb-24">
         <div className="max-w-7xl mx-auto px-6 mb-8">
           <AnimatedSection>

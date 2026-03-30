@@ -26,7 +26,7 @@ export default function BlogPage() {
             <div className="text-center py-24 border border-theme rounded-2xl bg-surface-secondary">
               <p className="text-muted text-lg mb-2">No posts yet.</p>
               <p className="text-muted text-sm">
-                Check back soon — content is coming.
+                Check back soon... content is coming!
               </p>
             </div>
           </AnimatedSection>
