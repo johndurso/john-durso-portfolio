@@ -28,7 +28,7 @@ And it's not just about loading speed. Images don't just affect loading speed. T
 
 ## The Core Web Vitals Connection
 
-If you care about SEO (and you should), you need to care about Core Web Vitals(https://developers.google.com/search/docs/appearance/core-web-vitals). The Core Web Vitals are three user-centric metrics that Google uses as ranking signals: Largest Contentful Paint (LCP) measures loading speed, Interaction to Next Paint (INP) measures interactivity, and Cumulative Layout Shift (CLS) measures visual stability.
+If you care about SEO (and you should), you need to care about [Core Web Vitals](https://developers.google.com/search/docs/appearance/core-web-vitals). The Core Web Vitals are three user-centric metrics that Google uses as ranking signals: Largest Contentful Paint (LCP) measures loading speed, Interaction to Next Paint (INP) measures interactivity, and Cumulative Layout Shift (CLS) measures visual stability.
 
 Here's what good scores actually look like in practice:
 
@@ -74,7 +74,7 @@ Browser caching also allows browsers to store static assets like images, CSS, an
 
 ## How to Know If You Have a Problem
 
-If you're not sure where your site stands, there are some great free tools to check. Google PageSpeed Insights(https://pagespeed.web.dev/) provides a performance score and actionable recommendations. GTmetrix(https://gtmetrix.com/) offers detailed performance reports including waterfall charts. WebPageTest(https://www.webpagetest.org/) allows you to test from various locations and browsers. Running your site through any one of these will give you a clear picture of what needs attention.
+If you're not sure where your site stands, there are some great free tools to check. [Google PageSpeed Insights](https://pagespeed.web.dev/) provides a performance score and actionable recommendations. [GTmetrix](https://gtmetrix.com/) offers detailed performance reports including waterfall charts. [WebPageTest](https://www.webpagetest.org/) allows you to test from various locations and browsers. Running your site through any one of these will give you a clear picture of what needs attention.
 
 ## The Takeaway
 
