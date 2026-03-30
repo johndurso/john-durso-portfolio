@@ -12,7 +12,7 @@ const featuredWork = [
     url: "https://nicgumina.com",
     image: "/images/work/nic-gumina.jpg",
     technologies: ["Next.js", "React", "Sass/SCSS", "Adobe Photoshop"],
-    description: "Freelance web design & digital media studio — branding, web, and creative services.",
+    description: "Professional website highlighting Nic Gumina's cybersecurity career.",
   },
   {
     title: "Motor City Comedy Festival",
@@ -26,7 +26,7 @@ const featuredWork = [
     url: "https://johannamedranda.com",
     image: "/images/work/johanna-medranda.png",
     technologies: ["Next.js", "React", "Framer", "Adobe Photoshop"],
-    description: "Website for Detroit stand-up comedian Johanna Medranda with show dates that update dynamically.",
+    description: "Single-page website for Detroit stand-up comedian Johanna Medranda.",
   },
 ];
 
