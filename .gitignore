@@ -39,6 +39,3 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
-
-# waiting for 3/31 to post
-/content/posts/ai-can-help-and-hurt-you-when-building-react-apps.md
