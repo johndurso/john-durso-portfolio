@@ -116,7 +116,7 @@ export default function HeroSection() {
             />
             <div className="relative w-72 h-72 md:w-96 md:h-96 rounded-full overflow-hidden border-4 border-[var(--color-accent)]/40 shadow-2xl">
               <Image
-                src="/images/john-durso.jpg"
+                src="/images/john-durso-hero.jpg"
                 alt="John Durso"
                 fill
                 sizes="(max-width: 1200px) 300px, 450px"

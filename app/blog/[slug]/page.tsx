@@ -2,7 +2,7 @@ import { getPostBySlug, getAllPosts, getPostContentAsHtml } from "@/lib/posts";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowLeft, Calendar, Tag } from "lucide-react";
+import { ArrowLeft, ArrowRight, Calendar, Tag } from "lucide-react";
 import type { Metadata } from "next";
 
 interface Props {
@@ -39,6 +39,11 @@ export default async function BlogPostPage({ params }: Props) {
     month: "long",
     day: "numeric",
   });
+
+  const allPosts = getAllPosts();
+  const currentIndex = allPosts.findIndex((p) => p.slug === slug);
+  const prevPost = currentIndex < allPosts.length - 1 ? allPosts[currentIndex + 1] : null;
+  const nextPost = currentIndex > 0 ? allPosts[currentIndex - 1] : null;
 
   return (
     <div className="pt-24 pb-20">
@@ -95,6 +100,44 @@ export default async function BlogPostPage({ params }: Props) {
           className="prose prose-lg max-w-none dark:prose-invert prose-headings:font-display prose-headings:font-bold prose-a:text-[var(--color-accent)] prose-a:no-underline hover:prose-a:underline"
           dangerouslySetInnerHTML={{ __html: contentHtml }}
         />
+
+        {(prevPost || nextPost) && (
+          <nav className="mt-16 pt-8 border-t border-theme grid grid-cols-2 gap-5">
+            <div>
+              {prevPost && (
+                <Link
+                  href={`/blog/${prevPost.slug}`}
+                  className="group flex flex-col gap-1 text-sm"
+                >
+                  <span className="inline-flex items-center gap-1.5 text-muted group-hover:text-accent transition-colors">
+                    <ArrowLeft size={14} />
+                    Previous post
+                  </span>
+                  <span className="font-medium text-foreground group-hover:text-accent transition-colors line-clamp-2">
+                    {prevPost.title}
+                  </span>
+                </Link>
+              )}
+            </div>
+
+            <div className="text-right">
+              {nextPost && (
+                <Link
+                  href={`/blog/${nextPost.slug}`}
+                  className="group flex flex-col gap-1.5 text-sm items-end"
+                >
+                  <span className="inline-flex items-center gap-1.5 text-muted group-hover:text-accent transition-colors">
+                    Next post
+                    <ArrowRight size={14} />
+                  </span>
+                  <span className="font-medium text-foreground group-hover:text-accent transition-colors line-clamp-2">
+                    {nextPost.title}
+                  </span>
+                </Link>
+              )}
+            </div>
+          </nav>
+        )}
       </div>
     </div>
   );
