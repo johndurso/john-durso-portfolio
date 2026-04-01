@@ -4,7 +4,7 @@ import { Briefcase, Camera, Music, Heart, Megaphone } from "lucide-react";
 
 const timeline = [
   {
-    role: "Web Platform Product Manager",
+    role: "Web Platform Manager",
     company: "Thomson Reuters",
     period: "Jan 2022 – Present",
     highlights: [
@@ -112,7 +112,7 @@ export default function AboutPage() {
             <div className="relative">
               <div className="rounded-2xl overflow-hidden border border-theme shadow-xl aspect-[4/5] relative">
                 <Image
-                  src="/images/john-durso.jpg"
+                  src="/images/john-durso-full.jpg"
                   alt="John Durso"
                   fill
                   className="object-cover object-top"

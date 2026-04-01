@@ -38,37 +38,6 @@ export default async function HomePage() {
     <>
       <HeroSection />
 
-      {/* Featured Work */}
-      <section className="max-w-7xl mx-auto px-6 py-24">
-        <AnimatedSection>
-          <div className="flex items-end justify-between mb-12">
-            <div>
-              <p className="text-accent text-sm font-semibold uppercase tracking-widest mb-2">
-                Selected Work
-              </p>
-              <h2 className="font-display font-bold text-3xl md:text-4xl">
-                Featured Projects
-              </h2>
-            </div>
-            <a
-              href="/work"
-              className="hidden sm:inline-flex items-center gap-2 text-sm font-medium text-muted hover:text-accent transition-colors"
-            >
-              View All Work <ArrowRight size={15} />
-            </a>
-          </div>
-        </AnimatedSection>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {featuredWork.map((item, i) => (
-            <AnimatedSection key={item.title} delay={i * 0.1}>
-              <WorkCard {...item} />
-            </AnimatedSection>
-          ))}
-        </div>
-      </section>
-
-      {/* Recent Blog Posts */}
       {recentPosts.length > 0 && (
         <section className="py-24">
           <div className="max-w-7xl mx-auto px-6">
@@ -101,6 +70,37 @@ export default async function HomePage() {
           </div>
         </section>
       )}
+
+      {/* Featured Work */}
+      <section className="max-w-7xl mx-auto px-6 py-24">
+        <AnimatedSection>
+          <div className="flex items-end justify-between mb-12">
+            <div>
+              <p className="text-accent text-sm font-semibold uppercase tracking-widest mb-2">
+                Selected Work
+              </p>
+              <h2 className="font-display font-bold text-3xl md:text-4xl">
+                Featured Projects
+              </h2>
+            </div>
+            <a
+              href="/work"
+              className="hidden sm:inline-flex items-center gap-2 text-sm font-medium text-muted hover:text-accent transition-colors"
+            >
+              View All Work <ArrowRight size={15} />
+            </a>
+          </div>
+        </AnimatedSection>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {featuredWork.map((item, i) => (
+            <AnimatedSection key={item.title} delay={i * 0.1}>
+              <WorkCard {...item} />
+            </AnimatedSection>
+          ))}
+        </div>
+      </section>
+
 
       {/* Contact */}
       <section className="max-w-7xl mx-auto px-6 py-24">
