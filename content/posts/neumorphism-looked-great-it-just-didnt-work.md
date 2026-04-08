@@ -11,7 +11,7 @@ Every few years, the design world gets swept up in a new aesthetic that feels ge
 ## So Where Did This Thing Come From?
  In late 2019, a designer named *Alexander Plyuto* posted a [concept on Dribbble](https://dribbble.com/shots/7994421-Skeuomorph-Mobile-Banking) that immediately blew up. The style combined soft shadows, muted backgrounds, and extruded shapes to create UI elements that looked like they were physically pressed into or popped out of the surface. It was skeuomorphism's cooler, more minimal cousin. Where the old iOS icons tried to look like real-world objects, neumorphism went for something more abstract.
 
-The name itself came from a portmanteau: "new" plus "skeuomorphism." Creadit for coining it goes to designer Michal Malewicz, who wrote one of the earliest explainer articles on the style. From there, the design community ran with it. Tutorials flooded YouTube, CSS snippets spread across CodePen, and design Twitter could not stop talking about it.
+The name itself came from a portmanteau: "new" plus "skeuomorphism." Designer [Michal Malewicz](https://michalmalewicz.medium.com) originally coined the term, who wrote one of the earliest explainer articles on the style. From there, the design community ran with it. Tutorials flooded YouTube, CSS snippets spread across CodePen, and design Twitter could not stop talking about it.
 
 ## The Peak: When Dribbble Became a Neumorphism Gallery
 
