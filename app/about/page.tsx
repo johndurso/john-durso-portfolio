@@ -1,8 +1,20 @@
 import AnimatedSection from "@/components/AnimatedSection";
 import Image from "next/image";
-import { Briefcase, Camera, Music, Heart, Megaphone } from "lucide-react";
+import { Briefcase, GraduationCap, ScrollText, Camera, Music, Heart, Megaphone, Scroll } from "lucide-react";
 
 const timeline = [
+  {
+    role: "Web Designer & Developer",
+    company: "Sleeping On The Job Media",
+    period: "Jan 2023 – Present",
+    highlights: [
+      "Design and develop production-ready Next.js and React applications for local businesses and creatives, applying component-driven architecture and reusable design patterns consistent with enterprise-level engineering standards.",
+      "Build fully responsive, accessible interfaces with Tailwind CSS, enforcing consistent design tokens and mobile-first layouts across every project.",
+      "Develop and maintain custom React functional components with Hooks for state management and side effects, mirroring patterns used in modern production application development.",
+      "Integrate RESTful APIs and third-party services into Next.js applications, managing data fetching with server-side rendering and static generation to optimize performance.",
+      "Manage all projects end-to-end using Git version control, maintaining clean commit history and branch strategies consistent with professional engineering team workflows.",
+    ],
+  },
   {
     role: "Web Platform Manager",
     company: "Thomson Reuters",
@@ -54,6 +66,14 @@ const skills = [
   { category: "Optimization", items: ["A/B Testing", "Multivariate Testing", "Click-Rate Optimization", "WCAG 2.2 AA", "SEO", "KPI Tracking"] },
   { category: "Collaboration", items: ["Agile/Scrum", "Jira", "Workfront", "Stakeholder Management", "Cross-Functional Teams"] },
 ];
+
+const education = [
+  { type: "Certification", name: "HTML/CSS, JavaScript with jQuery, and Bootstrap (Top 10% Ranking)", institution: "TestDome", extra: "" },
+  { type: "Certification", name: "Claude 101", institution: "Anthropic", extra: "" },
+  { type: "Certification", name: "Develop Global Websites with Adobe Experience Manager", institution: "Adobe", extra: "" },
+  { type: "Certification", name: "Agile Marketing", institution: "Thomson Reuters", extra: "" },
+  { type: "Education", name: "Associate's Degree in Web Design", institution: "Schoolcraft College", extra: "Intership: Schoolcraft Webmaster" }
+]
 
 export default function AboutPage() {
   return (
@@ -238,22 +258,32 @@ export default function AboutPage() {
           </div>
         </AnimatedSection>
 
-        {/* Education */}
+        {/* Education/Certifications */}
         <AnimatedSection className="mt-12">
-          <div className="bg-surface-secondary border border-theme rounded-2xl p-6 md:p-8 flex flex-col sm:flex-row sm:items-center gap-4">
-            <div className="w-12 h-12 rounded-xl bg-[var(--color-accent)]/10 flex items-center justify-center flex-shrink-0">
-              <Briefcase size={22} className="text-accent" />
+          <h2 className="font-display font-bold text-3xl md:text-4xl mb-10">
+            Education & Certifications
+          </h2>
+          {education.map((item, index) => (
+            <div
+              key={index}
+              className={`bg-surface-secondary border border-theme rounded-2xl p-6 md:p-8 flex flex-col sm:flex-row sm:items-center gap-4 ${index < education.length - 1 ? "mb-6" : ""}`}
+            >
+              <div className="w-12 h-12 rounded-xl bg-[var(--color-accent)]/10 flex items-center justify-center flex-shrink-0">
+                {item.type === "Education" ? (
+                  <GraduationCap size={22} className="text-accent" />
+                ) : (
+                  <ScrollText size={22} className="text-accent" />
+                )}
+              </div>
+              <div>
+                <h3 className="font-display font-bold text-lg">{item.name}</h3>
+                <p className="text-accent text-sm font-semibold">{item.institution}</p>
+                {item.extra && (
+                  <p className="text-muted text-sm mt-0.5">{item.extra}</p>
+                )}
+              </div>
             </div>
-            <div>
-              <h3 className="font-display font-bold text-lg">
-                Associate's Degree in Web Design
-              </h3>
-              <p className="text-accent text-sm font-semibold">Schoolcraft College</p>
-              <p className="text-muted text-sm mt-0.5">
-                Internship: Schoolcraft Webmaster
-              </p>
-            </div>
-          </div>
+          ))}
         </AnimatedSection>
       </div>
     </div>
