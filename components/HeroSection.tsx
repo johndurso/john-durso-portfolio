@@ -5,7 +5,7 @@ import Image from "next/image";
 import { ArrowDown, Mail } from "lucide-react";
 import Link from "next/link";
 
-const roles = ["Front-End Developer", "Web Guru", "Perpertual Learner"];
+const roles = ["Front-End Developer", "Web Guru", "Perpetual Learner"];
 
 export default function HeroSection() {
   return (
