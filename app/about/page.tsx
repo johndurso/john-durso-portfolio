@@ -1,10 +1,11 @@
 import AnimatedSection from "@/components/AnimatedSection";
 import Image from "next/image";
-import { Briefcase, GraduationCap, ScrollText, Camera, Music, Heart, Megaphone, Scroll } from "lucide-react";
+import { Download, Briefcase, GraduationCap, ScrollText, Camera, Music, Heart, Megaphone, Scroll } from "lucide-react";
+import Link from "next/link";
 
 const timeline = [
   {
-    role: "Web Designer & Developer",
+    role: "Founder, Web Designer/Developer/Admin",
     company: "Sleeping On The Job Media",
     period: "Jan 2023 – Present",
     highlights: [
@@ -18,7 +19,7 @@ const timeline = [
   {
     role: "Web Platform Manager",
     company: "Thomson Reuters",
-    period: "Jan 2022 – Present",
+    period: "Jan 2022 – April 2026",
     highlights: [
       "Own end-to-end design & experience strategy for US, UK, and Canadian markets",
       "Drove 21% increase in conversion rates and 8% increase in sales via A/B & multivariate testing",
@@ -228,9 +229,16 @@ export default function AboutPage() {
           <p className="text-accent text-sm font-semibold uppercase tracking-widest mb-3">
             Experience
           </p>
-          <h2 className="font-display font-bold text-3xl md:text-4xl mb-10">
+          <h2 className="font-display font-bold text-3xl md:text-4xl mb-5">
             Career Timeline
           </h2>
+          <Link
+              href="/files/resume.pdf"
+              target="_blank"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-theme text-[var(--color-text)] font-semibold text-sm hover:border-[var(--color-accent)] hover:text-accent transition-all mb-5"
+            >
+              Download resume <Download size={16} />
+            </Link>
           <div className="space-y-6">
             {timeline.map((job, i) => (
               <AnimatedSection key={job.role + job.period} delay={i * 0.1}>
